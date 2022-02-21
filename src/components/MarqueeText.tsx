@@ -1,12 +1,7 @@
 import Marquee from "react-fast-marquee";
 import homeContent from "../../site/home.yml";
 
-
-type Props = {
-  text: string;
-};
-
-export default function MarqueeText({text}: Props) {
+export default function MarqueeText({text}) {
   return (
     <Marquee>
       {homeContent.marquee}
