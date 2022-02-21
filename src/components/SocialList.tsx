@@ -1,6 +1,4 @@
 import React from "react";
-import Twitter from "../assets/twitter-alt.svg";
-import GitHub from "../assets/github-alt.svg";
 import config from "../lib/config";
 
 export function SocialList({}) {
@@ -8,19 +6,19 @@ export function SocialList({}) {
     <div>
       <a
         title="Twitter"
-        href={`https://twitter.com/${config.twitter_account}`}
+        href={`https://twitter.com/${config.instagram}`}
         target="_blank"
         rel="noopener"
       >
-        <Twitter width={24} height={24} fill={"#222"} />
+       Instagram
       </a>
       <a
         title="GitHub"
-        href={`https://github.com/${config.github_account}`}
+        href={`https://github.com/${config.linkedin}`}
         target="_blank"
         rel="noopener"
       >
-        <GitHub width={24} height={24} fill={"#222"} />
+       Linkedin
       </a>
       <style jsx>{`
         a {
