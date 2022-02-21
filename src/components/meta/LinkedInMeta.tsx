@@ -1,23 +1,25 @@
 import config from "../../lib/config";
 import Head from "next/head";
 
+// TODO:
+
 type Props = {
   url: string;
   title?: string;
   description?: string;
 };
-export default function TwitterCardMeta({ url, title, description }: Props) {
+export default function LinkedInMeta({ url, title, description }: Props) {
   return (
     <Head>
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:site" content={config.twitter_account} />
-      <meta property="twitter:url" content={config.base_url + url} />
+      <meta property="og:image" content="summary_large_image" />
+      <meta property="og:url" content={config.linkedin} />
+      <meta property="og:url" content={config.base_url + url} />
       <meta
-        property="twitter:title"
+        property="og:title"
         content={title ? [title, config.site_title].join(" | ") : ""}
       />
       <meta
-        property="twitter:description"
+        property="og:description"
         content={description ? description : config.site_description}
       />
     </Head>
