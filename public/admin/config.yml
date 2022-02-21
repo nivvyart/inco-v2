@@ -88,15 +88,6 @@ collections:
                 widget: "string"
                 hint: "Tag name for displaying on the site"
 
-  - name: "homepage"
-    label: "Homepage"
-    file: "home/content.yml"
-    description: "Homepage content"
-    fields:
-      - label: "Marquee Text"
-        name: "marquee"
-        widget: "text"
-
   - name: "posts"
     label: "Posts"
     folder: "content/posts/"
@@ -148,3 +139,27 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+  
+  - label: "Pages"
+    name: "pages"
+    files:
+     - label: "Home Page"
+        name: "home"
+        file: "site/home.yml"
+        fields:
+          - {label: Marquee, name: marquee, widget: string}
+         
+      - label: "About Page"
+        name: "about"
+        file: "site/about.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Position, name: position, widget: string}
+              - {label: Photo, name: photo, widget: image}
+     
