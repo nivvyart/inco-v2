@@ -1,14 +1,15 @@
 import Marquee from "react-fast-marquee";
+import homeContent from "../../site/home.yml";
 
 
-// type Props = {
-//   date: Date;
-// };
+type Props = {
+  text: string;
+};
 
-export default function MarqueeText() {
+export default function MarqueeText({text}: Props) {
   return (
     <Marquee>
-      some text in here blah blah blah
+      {homeContent.marquee}
     </Marquee>
   );
 }
