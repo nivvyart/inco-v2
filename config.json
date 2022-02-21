@@ -1,7 +1,7 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Change",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://inco-demo.netlify.app/",
+  "site_title": "Inco Architecture",
+  "site_description": "meta description",
   "site_keywords": [
     {
       "keyword": "Next.js"
