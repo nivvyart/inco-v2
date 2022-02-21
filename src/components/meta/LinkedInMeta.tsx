@@ -1,8 +1,6 @@
 import config from "../../lib/config";
 import Head from "next/head";
 
-// TODO:
-
 type Props = {
   url: string;
   title?: string;
