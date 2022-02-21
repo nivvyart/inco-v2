@@ -6,7 +6,7 @@ import Layout from "./Layout";
 import BasicMeta from "./meta/BasicMeta";
 import JsonLdMeta from "./meta/JsonLdMeta";
 import OpenGraphMeta from "./meta/OpenGraphMeta";
-import TwitterCardMeta from "./meta/TwitterCardMeta";
+import LinkedInMeta from "./meta/LinkedInMeta";
 import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
@@ -40,7 +40,7 @@ export default function PostLayout({
         keywords={keywords}
         description={description}
       />
-      <TwitterCardMeta
+      <LinkedInMeta
         url={`/posts/${slug}`}
         title={title}
         description={description}
