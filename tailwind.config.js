@@ -6,12 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
-        main: "var(--main)",
-        background: "var(--background)",
-        header: "var(--header)",
-        accent: "var(--accent)",
+        black: "var(--black)",
+        grey: "var(--grey)",
+        olive: "var(--olive)",
+        terracotta: "var(--terracotta)",
+        timber: "var(--timber)",
       }
     },
   },

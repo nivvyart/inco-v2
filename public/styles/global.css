@@ -11,6 +11,14 @@
 .root,
 #root,
 #docs-root {
+  --black: #282727;
+  --grey: #F6F6F6;
+  --olive: #484430;
+  --terracotta: #84452D;
+  --timber: #7B5F4D; 
+
+
+
   --primary: #367ee9;
   --secondary: #a0aec0;
   --accent: #718096;

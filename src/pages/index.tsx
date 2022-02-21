@@ -3,6 +3,8 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import LinkedInMeta from "../components/meta/LinkedInMeta";
 import { SocialList } from "../components/SocialList";
+import Marquee from "react-fast-marquee";
+
 
 export default function Index() {
   return (
@@ -12,6 +14,10 @@ export default function Index() {
       <LinkedInMeta url={"/"} />
       <div className="container">
         <div>
+        <Marquee>
+          I can be a React component, multiple React components, or just some text.
+        </Marquee>
+
           <h1>
             Hi, We're Next.js & Netlify<span className="fancy">.</span>
           </h1>

@@ -89,7 +89,8 @@ collections:
                 hint: "Tag name for displaying on the site"
 
   - name: "homepage"
-    lable: "Homepage"
+    label: "Homepage"
+    file: "home/content.yml"
     description: "Homepage content"
     fields:
       - label: "Marquee Text"
