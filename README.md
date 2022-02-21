@@ -3,6 +3,7 @@
 - tailwind
 - https://github.com/justin-chu/react-fast-marquee#readme
 
+- https://levelup.gitconnected.com/tailwindcss-with-css-variables-513abe2e9a5
 
 
 

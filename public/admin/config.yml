@@ -88,6 +88,14 @@ collections:
                 widget: "string"
                 hint: "Tag name for displaying on the site"
 
+  - name: "homepage"
+    lable: "Homepage"
+    description: "Homepage content"
+    fields:
+      - label: "Marquee Text"
+        name: "marquee"
+        widget: "text"
+
   - name: "posts"
     label: "Posts"
     folder: "content/posts/"
