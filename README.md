@@ -5,6 +5,10 @@
 
 - https://levelup.gitconnected.com/tailwindcss-with-css-variables-513abe2e9a5
 
+npm  install
+
+npm run dev
+
 
 
 ![Next.js blogging template for Netlify](https://repository-images.githubusercontent.com/284910441/d8efc300-e2ae-11ea-9596-b01e3844e39d)

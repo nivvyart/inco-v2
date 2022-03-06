@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import LinkedInMeta from "../components/meta/LinkedInMeta";
-import { SocialList } from "../components/SocialList";
 import MarqueeText from "../components/MarqueeText"
 
 
@@ -16,12 +15,8 @@ export default function Index() {
         <div>
           <MarqueeText />
 
-          <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
-          </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
-          <SocialList />
+          
+         
         </div>
       </div>
       <style jsx>{`

@@ -18,7 +18,6 @@ export default function Burger({ active, onClick }: Props) {
             top: 1rem;
             left: 1.25rem;
             z-index: 2;
-            background-color: rgba(255, 255, 255, 0.7);
           }
           .meat {
             position: absolute;
@@ -48,11 +47,7 @@ export default function Burger({ active, onClick }: Props) {
             transform: rotate(-45deg);
           }
 
-          @media (min-width: 769px) {
-            .container {
-              display: none;
-            }
-          }
+          
         `}
       </style>
     </div>
