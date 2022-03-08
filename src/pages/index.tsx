@@ -3,6 +3,8 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import LinkedInMeta from "../components/meta/LinkedInMeta";
 import MarqueeText from "../components/MarqueeText"
+import IncoLogoWhite from "../assets/INCO_MARK_Light.svg"
+
 
 
 export default function Index() {
@@ -11,51 +13,31 @@ export default function Index() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <LinkedInMeta url={"/"} />
-      <div className="container">
-        <div>
+      <div className="home">
+        <div className="marquee">
           <MarqueeText />
-
-          
-         
+        </div>
+        <div className="h-full  nav-info flex items-end">
+          <IncoLogoWhite />
         </div>
       </div>
       <style jsx>{`
-        .container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex: 1 1 auto;
-          padding: 0 1.5rem;
+       .marquee {
+        position: fixed;
+        width: 100%;
+        height: 30px;
+        cursor: pointer;
+        padding-top: 0.4rem;
+        padding-left: 2.5rem;
+        z-index: 2;
+        background: grey;
         }
-        h1 {
-          font-size: 2.5rem;
-          margin: 0;
-          font-weight: 500;
+        .home {
+          background: blue;
+          height: 100vh;
+          width: 100vw;
         }
-        h2 {
-          font-size: 1.75rem;
-          font-weight: 400;
-          line-height: 1.25;
-        }
-        .fancy {
-          color: #15847d;
-        }
-        .handle {
-          display: inline-block;
-          margin-top: 0.275em;
-          color: #9b9b9b;
-          letter-spacing: 0.05em;
-        }
-
-        @media (min-width: 769px) {
-          h1 {
-            font-size: 3rem;
-          }
-          h2 {
-            font-size: 2.25rem;
-          }
-        }
-      `}</style>
+        `}</style>
     </Layout>
   );
 }

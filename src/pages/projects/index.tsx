@@ -25,7 +25,10 @@ export default function Index({ posts, tags, pagination }: Props) {
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <LinkedInMeta url={url} title={title} />
+      <div className="container">
       <PostList posts={posts} tags={tags} pagination={pagination} />
+        
+      </div>
     </Layout>
   );
 }

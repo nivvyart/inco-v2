@@ -155,9 +155,9 @@ collections:
         fields:
           - {label: Marquee, name: marquee, widget: string}
           
-      - label: "About Page"
-        name: "about"
-        file: "site/about.yml"
+      - label: "Studio Page"
+        name: "studio"
+        file: "site/studio.yml"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
