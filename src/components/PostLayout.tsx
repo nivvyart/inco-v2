@@ -35,23 +35,23 @@ export default function PostLayout({
   return (
     <Layout>
       <BasicMeta
-        url={`/posts/${slug}`}
+        url={`/projects/${slug}`}
         title={title}
         keywords={keywords}
         description={description}
       />
       <LinkedInMeta
-        url={`/posts/${slug}`}
+        url={`/projects/${slug}`}
         title={title}
         description={description}
       />
       <OpenGraphMeta
-        url={`/posts/${slug}`}
+        url={`/projects/${slug}`}
         title={title}
         description={description}
       />
       <JsonLdMeta
-        url={`/posts/${slug}`}
+        url={`/projects/${slug}`}
         title={title}
         keywords={keywords}
         date={date}
