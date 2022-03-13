@@ -161,6 +161,7 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
+          - {label: Main Image, name: main_image, widget: markdown}
           - label: Team
             name: team
             widget: list
@@ -168,4 +169,19 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Position, name: position, widget: string}
               - {label: Photo, name: photo, widget: image}
+              - {label: Description, name: description, widget: markdown}
+      
+      - label: "Inco Lab"
+        name: "inco_lab"
+        file: "site/inco_lab.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+      
+      - label: "Contact"
+        name: "inco_lab"
+        file: "site/contact.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Address, name: address, widget: markdown}
+
      
