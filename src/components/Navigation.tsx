@@ -41,8 +41,8 @@ export default function Navigation() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/">
-                      <a className={router.pathname === "/" ? "active" : null}>INCO Lab</a>
+                    <Link href="/inco-lab">
+                      <a className={router.pathname === "/inco-lab" ? "active" : null}>INCO Lab</a>
                     </Link>
                   </li>
                 </ul>
@@ -57,7 +57,9 @@ export default function Navigation() {
                   <div className="text-right pr-4">
                     &copy; 2022 INCO Studio
                   </div>
-                  <div></div>
+                  <div>
+                    
+                  </div>
                 </div>
               </div>
             </div>
