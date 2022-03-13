@@ -4,49 +4,33 @@ type Props = {
 };
 export default function Burger({ active, onClick }: Props) {
   return (
-    <div className={"container " + (active ? "active" : "")} onClick={onClick}>
-      <div className={"meat meat-1"} />
-      <div className={"meat meat-2"} />
-      <div className={"meat meat-3"} />
+    <div className={"burger-wrap " + (active ? "active" : "")} onClick={onClick}>
+      <div className={"dot"} />
       <style jsx>
         {`
-          .container {
+          .burger-wrap {
             position: fixed;
-            width: 38px;
-            height: 38px;
+            width: 15px;
+            height: 15px;
             cursor: pointer;
-            top: 1rem;
-            left: 1.25rem;
-            z-index: 2;
-          }
-          .meat {
-            position: absolute;
-            width: 28px;
-            height: 2px;
-            background: #222;
-            top: calc(50% - 2px / 2);
-            left: calc(50% - 28px / 2);
-            transition: all 150ms ease-in;
-          }
-          .meat-1 {
-            transform: translateY(-10px);
-          }
-          .meat-2 {
-            width: calc(28px - 6px);
-          }
-          .meat-3 {
-            transform: translateY(10px);
-          }
-          .active .meat-1 {
-            transform: rotate(45deg);
-          }
-          .active .meat-2 {
-            opacity: 0;
-          }
-          .active .meat-3 {
-            transform: rotate(-45deg);
+            top: 0.5rem;
+            left: 1rem;
+            z-index: 5;
           }
 
+          .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid black;
+            background-color: black
+          }
+          .active .dot {
+           
+            background-color:transparent;
+          }
+          
           
         `}
       </style>

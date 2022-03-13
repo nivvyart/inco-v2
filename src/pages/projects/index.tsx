@@ -18,14 +18,17 @@ type Props = {
   };
 };
 export default function Index({ posts, tags, pagination }: Props) {
-  const url = "/posts";
+  const url = "/projects";
   const title = "All posts";
   return (
     <Layout>
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <LinkedInMeta url={url} title={title} />
+      <div className="container mx-auto">
       <PostList posts={posts} tags={tags} pagination={pagination} />
+        
+      </div>
     </Layout>
   );
 }
