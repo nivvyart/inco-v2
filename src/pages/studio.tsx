@@ -11,7 +11,7 @@ export default function Studio() {
       <LinkedInMeta url={"/"} />
       <div className="container mx-auto">
         <div>
-          hello
+          hello test
         </div>
       </div>
       
