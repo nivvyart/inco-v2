@@ -178,7 +178,7 @@ collections:
           - {label: Title, name: title, widget: string}
       
       - label: "Contact"
-        name: "inco_lab"
+        name: "contact"
         file: "site/contact.yml"
         fields:
           - {label: Title, name: title, widget: string}
