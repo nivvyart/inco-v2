@@ -9,8 +9,9 @@ export default function Studio() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <LinkedInMeta url={"/"} />
-      <div className="container">
+      <div className="container mx-auto">
         <div>
+          hello
         </div>
       </div>
       
