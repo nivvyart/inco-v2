@@ -161,7 +161,7 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
-          - {label: Main Image, name: main_image, widget: markdown}
+          - {label: Main Image, name: main_image, widget: image}
           - label: Team
             name: team
             widget: list
