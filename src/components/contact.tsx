@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <>
     <div className="contact">
-      <Link href="/projects">
+      <Link href="/contact">
         <a href="/contact">contact</a>
       </Link>
     </div>

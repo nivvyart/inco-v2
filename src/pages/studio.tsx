@@ -11,19 +11,19 @@ export default function Studio() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <LinkedInMeta url={"/"} />
-        <div className="container mx-auto">
-          <div className="grid grid-cols-2 gap-0">
-            <div>
+      <div className="page_title">Studio</div>
+        <div className="mx-auto">
+          <div className="grid lg:grid-cols-2 gap-0 grid-cols-1">
+            <div className="left-content lg:w-9/12 lg:mr-0 lg:ml-auto lg:pr-20 w-10/12 px-20 mx-auto">
               <div>
-                <h2>{studioContent.title}</h2>
-                <p>{studioContent.intro}</p>
+                <h4 className="mt-20">{studioContent.title}</h4>
+                <div>{studioContent.intro}</div>
               </div>
-              <div>
+              <div className="max-w-sm">
               {studioContent.team.map((person, k) => (
-                <div key={k}>
-                  <h2>{person.name}</h2>
-                  <h3>{person.position}</h3>
+                <div key={k} className="my-10">
                   <img src={person.photo} alt={person.name + ' profile image'} />
+                  <h5 className="my-4 leading-none text-lg">{person.name} <br/>{person.position}</h5>
                   <div>{person.description}</div>
                 </div>
               ))}
@@ -31,11 +31,20 @@ export default function Studio() {
               </div>
 
             </div>
-            <div></div>
+            <div className="bg-grey hidden lg:block"></div>
             
           </div>
         </div>
-      
+      <style jsx>{`
+        .page_title {
+          transform: rotate(270deg);
+          position: absolute;
+          top: 52px;
+          line-height: 17px;
+          left: -7px;
+          font-size: 1.5rem;
+        }
+      `}</style>
     </Layout>
   );
 }

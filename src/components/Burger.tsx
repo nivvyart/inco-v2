@@ -1,11 +1,15 @@
+import { useRouter } from 'next/router'
+
 type Props = {
   active: boolean;
   onClick: () => void;
 };
 export default function Burger({ active, onClick }: Props) {
+  let url = useRouter()
+  
   return (
     <div className={"burger-wrap " + (active ? "active" : "")} onClick={onClick}>
-      <div className={"dot"} />
+      <div className={"dot" + (url.pathname == '/contact' ? ' reverse' : '')} />
       <style jsx>
         {`
           .burger-wrap {
@@ -26,9 +30,14 @@ export default function Burger({ active, onClick }: Props) {
             border: 1px solid black;
             background-color: black
           }
+
           .active .dot {
-           
             background-color:transparent;
+          }
+
+          .dot.reverse {
+            border: 1px solid white;
+            background-color: white;
           }
           
           
