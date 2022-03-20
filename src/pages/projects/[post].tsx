@@ -85,8 +85,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       tags: data.tags,
       author: data.author,
       source: mdxSource,
-      featureImage: data.featureImage,
-      images: data.images
+      // featureImage: data.featureImage,
+      // images: data.images
     },
   };
 };
