@@ -58,7 +58,7 @@ export default function PostLayout({
         author={authorName}
         description={description}
       />
-      <div className={"container"}>
+      <div className={"container mx-auto"}>
         <article>
           <header>
             <h1>{title}</h1>

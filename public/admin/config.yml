@@ -136,6 +136,12 @@ collections:
           displayFields:
             - "tags.*.name"
           valueField: "tags.*.slug"
+      - label: "Feature Image"
+        name: "featureImage"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
       - label: "Images"
         name: "images"
         widget: "image"

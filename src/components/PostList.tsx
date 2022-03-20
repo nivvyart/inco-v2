@@ -4,6 +4,8 @@ import PostItem from "./PostItem";
 import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
+import { useState } from "react";
+
 
 type Props = {
   posts: PostContent[];
@@ -13,12 +15,25 @@ type Props = {
     pages: number;
   };
 };
+
 export default function PostList({ posts, tags, pagination }: Props) {
+
+  const [listView, setView]= React.useState(false)
+  
+  const showMenu = () => {
+    setView(!listView)
+    if(listView === true) {
+     console.log('true')
+    }else {
+      console.log('false')
+    }
+  }
+
   return (
       <div className={"posts"}>
         
-        <div className="text-center pt-2 ">
-          <a className="text-black" href="#">List View</a>
+        <div className="text-center pt-2" onClick={showMenu}>
+          <a className="text-black" href="#">{listView ? 'Image View' : 'List View'}</a>
         </div>
         <div className="text-center">
           <ul>
@@ -28,11 +43,9 @@ export default function PostList({ posts, tags, pagination }: Props) {
               </li>
             ))}
           </ul>
-        </div>
-       
+        </div>   
 
-
-        <ul className={"post-list"}>
+        <ul className={"post_list imageview_" + (listView ? 'enabled' : '')} >
           {posts.map((it, i) => (
             <li key={i}>
               <PostItem post={it} />
