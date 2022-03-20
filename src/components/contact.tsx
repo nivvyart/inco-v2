@@ -16,6 +16,7 @@ export default function Contact() {
             right: 0;
             top: 0.5rem;
             padding-right: 1rem;
+            z-index: 5;
           }
           .contact a {
             color: black;

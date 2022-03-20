@@ -1,9 +1,14 @@
 import React from "react";
 import config from "../lib/config";
 
-export function SocialList({}) {
+
+type Props = {
+ white: boolean
+};
+
+export function SocialList({ white }: Props) {
   return (
-    <div>
+    <div className={white ? 'text-white' : ''}>
       <a
         title="Twitter"
         href={`https://twitter.com/${config.instagram}`}
@@ -21,6 +26,10 @@ export function SocialList({}) {
        Linkedin
       </a>
       <style jsx>{`
+        .text-white a {
+          color: white;
+        }
+
         a {
           display: inline-block;
         }
