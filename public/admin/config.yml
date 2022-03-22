@@ -142,22 +142,6 @@ collections:
         media_library:
           config:
             multiple: false
-      - label: Images
-        label_singular: "Image"
-        name: "images"
-        widget: list
-        summary: "{{fields.image}}"
-        field:
-          label: Images
-          name: images
-          widget: relation
-          collection: "media"
-          file: "images"
-          searchFields:
-            - "images.*.name"
-          displayFields:
-            - "images.*.name"
-          valueField: "images.*.name"
       - label: "Gallery"
         name: "galleryImages"
         widget: "list"
@@ -204,28 +188,3 @@ collections:
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Address, name: address, widget: markdown}
-
-  - name: "media"
-    label: "Media"
-    delete: false
-    editor:
-      preview: false
-    files:
-      - name: "images"
-        label: "Images"
-        file: "media/images.yml"
-        description: "Images for posts"
-        fields:
-          - name: images
-            label: Images
-            label_singular: "Image"
-            widget: list
-            fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-                hint: "Name of image, use a ref id"
-              - label: "Image"
-                name: "image"
-                widget: "image"
-             
