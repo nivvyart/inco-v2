@@ -156,6 +156,7 @@ collections:
             - "images.*.name"
           displayFields:
             - "images.*.name"
+          valueField: "images.*.image"
       - label: "Body"
         name: "body"
         widget: "markdown"
