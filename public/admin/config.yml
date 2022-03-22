@@ -143,15 +143,19 @@ collections:
           config:
             multiple: false
       - label: Images
+        label_singular: "Image"
         name: "images"
-        widget: relation
-        collection: "media"
-        file: "images"
-        searchFields:
-          - "images.*.name"
-        displayFields:
-          - "images.*.name"
-        valueField: "images.*.slug"
+        widget: list
+        field:
+          label: Images
+          name: images
+          widget: relation
+          collection: "media"
+          file: "images"
+          searchFields:
+            - "images.*.name"
+          displayFields:
+            - "images.*.name"
       - label: "Body"
         name: "body"
         widget: "markdown"
