@@ -142,6 +142,16 @@ collections:
         media_library:
           config:
             multiple: false
+      - label: Images
+        name: "images"
+        widget: relation
+        collection: "media"
+        file: "images"
+        searchFields:
+          - "images.*.name"
+        displayFields:
+          - "images.*.name"
+        valueField: "images.*.slug"
       - label: "Body"
         name: "body"
         widget: "markdown"
