@@ -184,4 +184,27 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Address, name: address, widget: markdown}
 
-     
+  - name: "media"
+    label: "Media"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "images"
+        label: "Images"
+        file: "media/images.yml"
+        description: "Images for posts"
+        fields:
+          - name: images
+            label: Images
+            label_singular: "Image"
+            widget: list
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+                hint: "Name of image, use a ref id"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+             
