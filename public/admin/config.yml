@@ -146,6 +146,7 @@ collections:
         label_singular: "Image"
         name: "images"
         widget: list
+        summary: "{{fields.image}}"
         field:
           label: Images
           name: images
@@ -156,7 +157,7 @@ collections:
             - "images.*.name"
           displayFields:
             - "images.*.name"
-          valueField: "images.*.image"
+          valueField: "images.*.name"
       - label: "Body"
         name: "body"
         widget: "markdown"
