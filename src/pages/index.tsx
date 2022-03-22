@@ -31,6 +31,7 @@ export default function Index() {
         padding-left: 2.5rem;
         z-index: 2;
         background: grey;
+        padding-right: 80px;
         }
         .home {
           background: blue;

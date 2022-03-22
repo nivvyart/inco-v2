@@ -20,6 +20,7 @@ type Props = {
   author: string;
   description?: string;
   children: React.ReactNode;
+  images: string[];
 };
 export default function PostLayout({
   title,
@@ -29,9 +30,12 @@ export default function PostLayout({
   tags,
   description = "",
   children,
+  images,
 }: Props) {
   const keywords = tags.map(it => getTag(it).name);
   const authorName = getAuthor(author).name;
+
+  
   return (
     <Layout>
       <BasicMeta
@@ -58,10 +62,10 @@ export default function PostLayout({
         author={authorName}
         description={description}
       />
-      <div className={"container mx-auto"}>
+      <div className={"container mx-auto pt-20"}>
         <article>
           <header>
-            <h1>{title}</h1>
+            <h1 className={"h4"}>{title}</h1>
             <div className={"metadata"}>
               <div>
                 <Date date={date} />
@@ -71,6 +75,8 @@ export default function PostLayout({
               </div>
             </div>
           </header>
+          <div>
+          </div>
           <div className="">{children}</div>
           <ul className={"tag-list"}>
             {tags.map((it, i) => (

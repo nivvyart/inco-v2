@@ -7,11 +7,16 @@ type Props = {
   post: PostContent;
 };
 export default function PostItem({ post }: Props) {
+  
+
+  
   return (
     <Link href={"/projects/" + post.slug}>
       <a>
         {/* <Date date={parseISO(post.date)} /> */}
         <h2>{post.title}</h2>
+        <img src={post.featureImage} alt="" />
+
       </a>
     </Link>
   );
