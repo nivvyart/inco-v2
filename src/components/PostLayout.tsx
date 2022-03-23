@@ -11,6 +11,7 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
+// import { fetchPostContent } from "../lib/posts"
 
 type Props = {
   title: string;
@@ -20,7 +21,8 @@ type Props = {
   author: string;
   description?: string;
   children: React.ReactNode;
-  images: string[];
+  galleryImages: string[];
+  featureImage: string;
 };
 export default function PostLayout({
   title,
@@ -30,12 +32,20 @@ export default function PostLayout({
   tags,
   description = "",
   children,
-  images,
+  galleryImages, //LUKE
+  featureImage //LUKE
 }: Props) {
   const keywords = tags.map(it => getTag(it).name);
   const authorName = getAuthor(author).name;
 
-  
+  // console.log(fetchPostContent)
+  var x = galleryImages
+  console.log('gallery images', galleryImages, x) //LUKE
+// these are undefined.
+  console.log('feature image', featureImage)//LUKE
+
+
+
   return (
     <Layout>
       <BasicMeta
@@ -76,6 +86,7 @@ export default function PostLayout({
             </div>
           </header>
           <div>
+      
           </div>
           <div className="">{children}</div>
           <ul className={"tag-list"}>

@@ -4,7 +4,7 @@ import PostItem from "./PostItem";
 import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
-import { useState } from "react";
+// import { useState } from "react";
 
 
 type Props = {
@@ -28,6 +28,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
       console.log('false')
     }
   }
+
 
   return (
       <div className={"posts"}>

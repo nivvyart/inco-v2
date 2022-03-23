@@ -13,7 +13,7 @@ export type PostContent = {
   readonly fullPath: string;
   // addded these 2
   readonly featureImage: string;
-  readonly images: string[];
+  readonly galleryImages: string[];
 };
 
 let postCache: PostContent[];
@@ -44,9 +44,10 @@ export function fetchPostContent(): PostContent[] {
         slug: string;
         // added these 2
         featureImage: string;
-        images: string[];
+        galleryImages: string[];
         fullPath: string,
       };
+
       matterData.fullPath = fullPath;
 
       const slug = fileName.replace(/\.mdx$/, "");

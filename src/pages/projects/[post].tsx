@@ -21,9 +21,9 @@ export type Props = {
   author: string;
   description?: string;
   source: MdxRemote.Source;
+  galleryImages: string[];
   // help
-  // featureImage: string;
-  // images: string[];
+  featureImage: string;
 };
 
 const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };
@@ -32,7 +32,7 @@ const slugToPostContent = (postContents => {
   postContents.forEach(it => hash[it.slug] = it)
   return hash;
 })(fetchPostContent());
-
+//LUKE
 export default function Post({
   title,
   dateString,
@@ -41,8 +41,8 @@ export default function Post({
   author,
   description = "",
   source,
-  // featureImage,
-  // images
+  galleryImages,
+  featureImage
 }: Props) {
   const content = hydrate(source, { components })
   return (
@@ -53,8 +53,8 @@ export default function Post({
       tags={tags}
       author={author}
       description={description}
-      // featureImage={featureImage}
-      // images={images}
+      galleryImages={galleryImages}
+      featureImage={featureImage} //LUKE
     >
       {content}
     </PostLayout>
@@ -68,7 +68,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
-
+//LUKE
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params.post as string;
   const source = fs.readFileSync(slugToPostContent[slug].fullPath, "utf8");
@@ -85,8 +85,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       tags: data.tags,
       author: data.author,
       source: mdxSource,
-      // featureImage: data.featureImage,
-      // images: data.images
+      galleryImages: data.galleryImages,
+      featureImage: data.featureImage,
     },
   };
 };
