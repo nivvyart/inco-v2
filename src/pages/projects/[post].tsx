@@ -45,6 +45,8 @@ export default function Post({
   featureImage
 }: Props) {
   const content = hydrate(source, { components })
+
+  console.log(galleryImages, 'gallery')
   return (
     <PostLayout
       title={title}
@@ -55,6 +57,7 @@ export default function Post({
       description={description}
       galleryImages={galleryImages}
       featureImage={featureImage} //LUKE
+
     >
       {content}
     </PostLayout>

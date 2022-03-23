@@ -86,7 +86,7 @@ export default function PostLayout({
             </div>
           </header>
           <div>
-      
+            {galleryImages}
           </div>
           <div className="">{children}</div>
           <ul className={"tag-list"}>
