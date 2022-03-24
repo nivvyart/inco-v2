@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Burger from "./Burger";
 import { useState } from "react";
-import IncoLogo from "../assets/INCO_MARK_Dark.svg"
+import IncoLogo from "../assets/INCO_LOGO.svg"
 import Clock from "./Clock"
 
 export default function Navigation() {
@@ -51,7 +51,7 @@ export default function Navigation() {
                   </div>
                 </div>
                 <div className="lg:grow lg:w-1/2 hidden lg:block">
-                  <div className="text-right pr-4">
+                  <div className="text-right">
                     &copy; 2022 INCO Studio
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function Navigation() {
 
           
           .nav-links li {
-            font-size: 5rem;
+            font-size: 10rem;
             line-height: 1;
 
           }

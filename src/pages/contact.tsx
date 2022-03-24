@@ -14,7 +14,7 @@ export default function Contact() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <LinkedInMeta url={"/"} />
-      <div className="page_title">Contact</div>
+      <div className="page_title title">Contact</div>
 
       <div className="bg-black text-white">
 
@@ -26,21 +26,21 @@ export default function Contact() {
             <div className="mt-20">
               <ReactMarkdown className="h4 text-center leading-tight">{contactContent.address}</ReactMarkdown>
             </div>
+            <div className="text-center">
+              <SocialList white={true} />
+            </div>
           </div>
         </div>
-        <div className="text-center">
-          <SocialList white={true} />
-        </div>
+       
       </div>
       
     <style jsx>{`
       .page_title {
         transform: rotate(270deg);
         position: absolute;
-        top: 65px;
+        top: 80px;
         line-height: 17px;
         left: -15px;
-        font-size: 1.5rem;
         color: white;
       }
 

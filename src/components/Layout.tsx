@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
 import Contact from "./contact"
+import IncoMark from "./incoMark";
 
 type Props = {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ export default function Layout({ children }: Props) {
         <Contact />
       </nav>
       <main>{children}</main>
+      <IncoMark />
       <style jsx>
         {`
          

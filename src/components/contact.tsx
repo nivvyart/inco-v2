@@ -5,7 +5,7 @@ export default function Contact() {
     <>
     <div className="contact">
       <Link href="/contact">
-        <a href="/contact">contact</a>
+        <a className="" href="/contact">Contact</a>
       </Link>
     </div>
     <style jsx>
@@ -14,12 +14,12 @@ export default function Contact() {
           .contact {
             position: absolute;
             right: 0;
-            top: 0.5rem;
+            top: 1rem;
             padding-right: 1rem;
             z-index: 5;
           }
           .contact a {
-            color: black;
+            color: #282727
           }
         
           `}

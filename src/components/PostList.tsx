@@ -33,13 +33,16 @@ export default function PostList({ posts, tags, pagination }: Props) {
   return (
       <div className={"posts"}>
         
-        <div className="text-center pt-2" onClick={showMenu}>
+        <div className="text-center pt-4 mb-3" onClick={showMenu}>
           <a className="text-black" href="#">{listView ? 'Image View' : 'List View'}</a>
         </div>
         <div className="text-center">
           <ul>
+            <li className="inline mx-3">
+              <a href="/projects">All</a>
+            </li>
             {tags.map((it, i) => (
-              <li className="inline mx-1" key={i}>
+              <li className="inline mx-3" key={i}>
                 <TagLink tag={it} />
               </li>
             ))}

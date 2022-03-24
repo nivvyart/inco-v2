@@ -3,7 +3,7 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import LinkedInMeta from "../components/meta/LinkedInMeta";
 import MarqueeText from "../components/MarqueeText"
-import IncoLogoWhite from "../assets/INCO_MARK_Light.svg"
+import IncoLogoWhite from "../assets/INCO_LOGO.svg"
 
 
 
@@ -17,8 +17,8 @@ export default function Index() {
         <div className="marquee">
           <MarqueeText />
         </div>
-        <div className="h-full  nav-info flex items-end">
-          <IncoLogoWhite />
+        <div className="h-full nav-info flex items-end p-4">
+          <IncoLogoWhite style={{fill: "white"}}/>
         </div>
       </div>
       <style jsx>{`
@@ -38,6 +38,7 @@ export default function Index() {
           height: 100vh;
           width: 100vw;
         }
+
         `}</style>
     </Layout>
   );

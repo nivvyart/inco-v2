@@ -17,14 +17,14 @@ export default function Burger({ active, onClick }: Props) {
             width: 15px;
             height: 15px;
             cursor: pointer;
-            top: 0.5rem;
+            top: 1rem;
             left: 1rem;
             z-index: 5;
           }
 
           .dot {
-            height: 10px;
-            width: 10px;
+            height: 15px;
+            width: 15px;
             border-radius: 50%;
             display: inline-block;
             border: 1px solid black;

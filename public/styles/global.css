@@ -45,9 +45,11 @@ body {
   font-family: "FoundersGrotesk", sans-serif;
   background-color: #fff;
   color: #222;
-  font-weight: 200;
   height: 100%;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: normal;
+
 }
 
 #__next {
@@ -66,7 +68,9 @@ a:hover {
 }
 
 h1, .h1 {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  margin-bottom: 1.15rem;
 }
 
 h2, .h2 {
@@ -78,13 +82,23 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.15;
+  margin-bottom: 1.15rem;
+  letter-spacing: 0.5px;
 }
 
 h5, .h5 {
   font-size: 1.5rem;
 }
 
+.title {
+  font-size: 1.5rem;
+  line-height: 1.15;
+  margin-bottom: 1.15rem;
+  letter-spacing: 0.5px;
+
+}
 
 
 .youtube-container {

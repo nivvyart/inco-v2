@@ -39,7 +39,7 @@ export default function Studio() {
         .page_title {
           transform: rotate(270deg);
           position: absolute;
-          top: 52px;
+          top: 75px;
           line-height: 17px;
           left: -7px;
           font-size: 1.5rem;
