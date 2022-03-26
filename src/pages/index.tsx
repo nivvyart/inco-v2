@@ -14,7 +14,7 @@ export default function Index() {
       <OpenGraphMeta url={"/"} />
       <LinkedInMeta url={"/"} />
       <div className="home">
-        <div className="marquee">
+        <div className="marquee bg-grey">
           <MarqueeText />
         </div>
         <div className="h-full nav-info flex items-end p-4">
@@ -23,15 +23,15 @@ export default function Index() {
       </div>
       <style jsx>{`
        .marquee {
-        position: fixed;
-        width: 100%;
-        height: 30px;
-        cursor: pointer;
-        padding-top: 0.4rem;
-        padding-left: 2.5rem;
-        z-index: 2;
-        background: grey;
-        padding-right: 80px;
+          position: fixed;
+          width: 100%;
+          height: 50px;
+          cursor: pointer;
+          padding-top: 0.4rem;
+          padding-left: 2.5rem;
+          z-index: 2;
+          padding-right: 1rem;
+          font-size: 1.8rem;
         }
         .home {
           background: blue;

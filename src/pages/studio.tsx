@@ -41,7 +41,7 @@ export default function Studio() {
           position: absolute;
           top: 75px;
           line-height: 17px;
-          left: -7px;
+          left: -5px;
           font-size: 1.5rem;
         }
       `}</style>

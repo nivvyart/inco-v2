@@ -146,7 +146,7 @@ collections:
         name: "galleryImages"
         widget: "list"
         summary: '{{fields.image}}'
-        field: {label: Image, name: image, widget: image}
+        field: {label: Image, name: image, widget: image, required: true}
       - label: "Body"
         name: "body"
         widget: "markdown"

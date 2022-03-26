@@ -11,7 +11,7 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
-// import { fetchPostContent } from "../lib/posts"
+import Image from 'next/image'
 
 type Props = {
   title: string;
@@ -32,17 +32,10 @@ export default function PostLayout({
   tags,
   description = "",
   children,
-  galleryImages, //LUKE
-  featureImage //LUKE
+  galleryImages
 }: Props) {
   const keywords = tags.map(it => getTag(it).name);
   const authorName = getAuthor(author).name;
-
-  // console.log(fetchPostContent)
-  var x = galleryImages
-  console.log('gallery images', galleryImages, x) //LUKE
-// these are undefined.
-  console.log('feature image', featureImage)//LUKE
 
 
 
@@ -72,41 +65,49 @@ export default function PostLayout({
         author={authorName}
         description={description}
       />
+      <h1 className={"title text-center p-4"}>{title}</h1>
+
       <div className={"container mx-auto pt-20"}>
+        <div className="page_title title">Projects</div>
+
         <article>
           <header>
-            <h1 className={"h4"}>{title}</h1>
-            <div className={"metadata"}>
+            {/* <div>
               <div>
                 <Date date={date} />
               </div>
               <div>
                 <Author author={getAuthor(author)} />
               </div>
-            </div>
+            </div> */}
           </header>
           <div>
-            {galleryImages}
+
+            {galleryImages.map((i, key) => (
+              <Image src={i} width={'auto'} height={'auto'} />
+            ))}
+
           </div>
           <div className="">{children}</div>
-          <ul className={"tag-list"}>
+          {/* <ul className={"tag-list"}>
             {tags.map((it, i) => (
               <li key={i}>
                 <TagButton tag={getTag(it)} />
               </li>
             ))}
-          </ul>
+          </ul> */}
         </article>
-        <footer>
-          <div className={"social-list"}>
-            <SocialList white={false}/>
-          </div>
-          <Copyright />
-        </footer>
+        
       </div>
       <style jsx>
         {`
-           
+          .page_title {
+            transform: rotate(270deg);
+            position: absolute;
+            top: 90px;
+            line-height: 17px;
+            left: -17px;
+          }
           `}
       </style>
      

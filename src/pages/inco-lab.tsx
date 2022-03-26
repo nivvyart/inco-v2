@@ -11,6 +11,8 @@ export default function Studio() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <LinkedInMeta url={"/"} />
+      <div className="page_title title">INCO Lab</div>
+
       <div className="container mx-auto">
         <div className="flex justify-center h-screen">
           <div className="m-auto">
@@ -18,7 +20,17 @@ export default function Studio() {
           </div>
         </div>
       </div>
-      
+      <style jsx>{`
+      .page_title {
+        transform: rotate(270deg);
+        position: absolute;
+        top: 90px;
+        line-height: 17px;
+        left: -24px;
+      }
+
+     
+      `}</style>
     </Layout>
   );
 }

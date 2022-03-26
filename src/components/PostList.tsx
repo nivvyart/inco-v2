@@ -1,6 +1,7 @@
 import React from "react";
 import { PostContent } from "../lib/posts";
 import PostItem from "./PostItem";
+import PostImageItem from "./PostImageItem";
 import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
@@ -31,8 +32,9 @@ export default function PostList({ posts, tags, pagination }: Props) {
 
 
   return (
-      <div className={"posts"}>
-        
+    <div className={"posts"}>
+        <div className="page_title title">Projects</div>
+
         <div className="text-center pt-4 mb-3" onClick={showMenu}>
           <a className="text-black" href="#">{listView ? 'Image View' : 'List View'}</a>
         </div>
@@ -48,14 +50,28 @@ export default function PostList({ posts, tags, pagination }: Props) {
             ))}
           </ul>
         </div>   
-
-        <ul className={"post_list imageview_" + (listView ? 'enabled' : '')} >
-          {posts.map((it, i) => (
-            <li key={i}>
-              <PostItem post={it} />
-            </li>
-          ))}
-        </ul>
+        {!listView ? 
+          <div className="post_list imageview" >
+            <div className={"grid grid-cols-3 gap-10 content-center	"}>
+              {posts.map((it, i) => (
+                <div key={i} className='imageview__item'>
+                  <PostImageItem post={it}  />
+                </div>
+              ))}
+            </div>
+          </div>
+         : 
+          <div className="post_list grid lg:min-h-[80vh] content-center listview text-center mt-20" >
+            <div className={"lg:w-4/6 mx-auto"}>
+              {posts.map((it, i) => (
+                <div key={i} className='listview__item'>
+                  <PostItem post={it}  />
+                </div>
+              ))}
+            </div>
+          </div>
+         }
+       
 
 
         <Pagination
@@ -68,6 +84,13 @@ export default function PostList({ posts, tags, pagination }: Props) {
         />
         
       <style jsx>{`
+       .page_title {
+        transform: rotate(270deg);
+        position: absolute;
+        top: 90px;
+        line-height: 17px;
+        left: -17px;
+      }
     
       `}</style>
     </div>

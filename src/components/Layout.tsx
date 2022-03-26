@@ -2,11 +2,14 @@ import Head from "next/head";
 import Navigation from "./Navigation";
 import Contact from "./contact"
 import IncoMark from "./incoMark";
+import { useRouter } from 'next/router'
 
 type Props = {
   children: React.ReactNode;
 };
 export default function Layout({ children }: Props) {
+  let url = useRouter()
+
   return (
     <div className="root">
       <Head>
@@ -18,12 +21,14 @@ export default function Layout({ children }: Props) {
       </Head>
       <nav>
         <Navigation />
-        <Contact />
+        { url.pathname == '/' ? '' : <Contact /> }
       </nav>
       <main>{children}</main>
-      <IncoMark />
+        { url.pathname == '/' ? '' : <IncoMark /> }
       <style jsx>
         {`
+
+          }
          
         `}
       </style>

@@ -46,7 +46,6 @@ export default function Post({
 }: Props) {
   const content = hydrate(source, { components })
 
-  console.log(galleryImages, 'gallery')
   return (
     <PostLayout
       title={title}

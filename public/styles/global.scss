@@ -9,6 +9,15 @@
   font-style: normal;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .root,
 #root,
 #docs-root {
@@ -99,6 +108,58 @@ h5, .h5 {
   letter-spacing: 0.5px;
 
 }
+
+/* site styles */
+/* post list page */
+
+.imageview__item {
+  position: relative;
+}
+
+.imageview__item .text {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: none;
+}
+
+.imageview__item:hover img {
+  display: none;
+}
+
+.imageview__item:hover .text {
+  display: flex;
+}
+
+/* list view starts */
+
+
+.listview__item {
+
+}
+
+.listview__item .title{
+ margin-bottom: 0;
+}
+
+// .listview__item time {
+//   display: none;
+// }
+
+
+// .listview__item img {
+//   display: none;
+//   position: fixed;
+// }
+
+// .listview__item:hover img {
+//   display: block;
+// }
+
+/* end */
 
 
 .youtube-container {
