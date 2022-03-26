@@ -11,7 +11,6 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
-import Image from 'next/image'
 
 type Props = {
   title: string;
@@ -84,7 +83,7 @@ export default function PostLayout({
           <div>
 
             {galleryImages.map((i, key) => (
-              <Image src={i} width={'auto'} height={'auto'} />
+              <img src={i} width={'auto'} height={'auto'} />
             ))}
 
           </div>
