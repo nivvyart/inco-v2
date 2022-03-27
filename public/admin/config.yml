@@ -159,8 +159,16 @@ collections:
         file: "site/home.yml"
         fields:
           - {label: Marquee, name: marquee, widget: string}
-          - {label: Desktop Background, name: desktopImg, widget: image}
-          - {label: Mobile Background, name: mobileImg, widget: image}
+          - label: "Desktop images"
+            name: "desktopImages"
+            widget: "list"
+            summary: '{{fields.image}}'
+            field: {label: Image, name: image, widget: image, required: true}
+          - label: "Mobile images"
+            name: "mobileImages"
+            widget: "list"
+            summary: '{{fields.image}}'
+            field: {label: Image, name: image, widget: image, required: true}
 
           
       - label: "Studio Page"
