@@ -1,19 +1,13 @@
 {
   "base_url": "https://inco-demo.netlify.app/",
-  "site_title": "Inco Architecture",
-  "site_description": "meta description",
+  "site_title": "Inco Studio",
+  "site_description": " INCO studio creates brand, building, object and space for hospitality, retail and residential.",
   "site_keywords": [
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    },
-    {
-      "keyword": "React"
-    }
+    "Architecture",
+    "Interior",
+    "Branding"
   ],
   "posts_per_page": 5,
-  "instagram": "@inco",
-  "linkedin": "inco"
+  "instagram": "@_incostudio",
+  "linkedin": "https://www.linkedin.com/company/incostudio"
 }
