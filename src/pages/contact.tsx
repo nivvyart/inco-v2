@@ -37,7 +37,7 @@ export default function Contact() {
     <style jsx>{`
       .page_title {
         transform: rotate(270deg);
-        position: absolute;
+        position: fixed;
         top: 80px;
         line-height: 17px;
         left: -15px;

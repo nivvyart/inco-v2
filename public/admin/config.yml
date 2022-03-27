@@ -159,6 +159,9 @@ collections:
         file: "site/home.yml"
         fields:
           - {label: Marquee, name: marquee, widget: string}
+          - {label: Desktop Background, name: desktopImg, widget: image}
+          - {label: Mobile Background, name: mobileImg, widget: image}
+
           
       - label: "Studio Page"
         name: "studio"

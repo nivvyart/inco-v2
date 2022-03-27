@@ -102,7 +102,7 @@ export default function PostLayout({
         {`
           .page_title {
             transform: rotate(270deg);
-            position: absolute;
+            position: fixed;
             top: 90px;
             line-height: 17px;
             left: -17px;

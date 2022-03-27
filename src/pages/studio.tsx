@@ -41,7 +41,7 @@ export default function Studio() {
       <style jsx>{`
         .page_title {
           transform: rotate(270deg);
-          position: absolute;
+          position: fixed;
           top: 75px;
           line-height: 17px;
           left: -5px;
