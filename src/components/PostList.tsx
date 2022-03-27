@@ -44,17 +44,17 @@ export default function PostList({ posts, tags, pagination }: Props) {
               <a href="/projects">All</a>
             </li>
             {tags.map((it, i) => (
-              <li className="inline mx-3" key={i}>
+              <li className="lg:inline mx-3" key={i}>
                 <TagLink tag={it} />
               </li>
             ))}
           </ul>
         </div>   
         {!listView ? 
-          <div className="post_list imageview" >
-            <div className={"grid grid-cols-3 gap-10 content-center	"}>
+          <div className="post_list mx-auto imageview p-10" >
+            <div className={"grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10 content-center	"}>
               {posts.map((it, i) => (
-                <div key={i} className='imageview__item'>
+                <div key={i} className='imageview__item relative'>
                   <PostImageItem post={it}  />
                 </div>
               ))}

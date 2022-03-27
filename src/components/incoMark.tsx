@@ -26,6 +26,13 @@ export default function IncoMark() {
         .inco-circle:hover {
           animation: rotation 2s infinite linear;
         }
+
+        @media only screen 
+        and (max-width : 800px) {
+        .inco-circle {
+          left: -86px;
+        }
+     }
      `}</style>
     </div>
   )

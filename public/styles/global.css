@@ -136,14 +136,22 @@ h5, .h5 {
 
 /* list view starts */
 
-
-.listview__item {
-
-}
-
 .listview__item .title{
  margin-bottom: 0;
 }
+
+@media only screen 
+   and (max-width : 1000px) {
+   /* Styles here */
+    /* .imageview__item .text {
+      display: flex;
+    } */
+    .imageview__item:hover img {
+      display: block;
+      opacity: 0;
+    }
+}
+
 
 /* end */
 

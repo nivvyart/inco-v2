@@ -17,7 +17,7 @@ export default function PostImageItem({ post }: Props) {
           </div>
         </div>
         
-        <img className="mx-auto " src={post.featureImage} alt=""/>
+        <img className="mx-auto" src={post.featureImage} alt=""/>
        
 
       </a>
