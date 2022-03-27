@@ -5,7 +5,6 @@ import PostImageItem from "./PostImageItem";
 import TagLink from "./TagLink";
 import Pagination from "./Pagination";
 import { TagContent } from "../lib/tags";
-// import { useState } from "react";
 
 
 type Props = {
@@ -23,11 +22,6 @@ export default function PostList({ posts, tags, pagination }: Props) {
   
   const showMenu = () => {
     setView(!listView)
-    if(listView === true) {
-     console.log('true')
-    }else {
-      console.log('false')
-    }
   }
 
 
@@ -72,16 +66,16 @@ export default function PostList({ posts, tags, pagination }: Props) {
           </div>
          }
        
-
-
-        <Pagination
-          current={pagination.current}
-          pages={pagination.pages}
-          link={{
-            href: (page) => (page === 1 ? "/projects" : "/projects/page/[page]"),
-            as: (page) => (page === 1 ? null : "/projects/page/" + page),
-          }}
-        />
+        {pagination.pages === 1 ? '' : 
+          <Pagination
+            current={pagination.current}
+            pages={pagination.pages}
+            link={{
+              href: (page) => (page === 1 ? "/projects" : "/projects/page/[page]"),
+              as: (page) => (page === 1 ? null : "/projects/page/" + page),
+            }}
+          />   
+        }
         
       <style jsx>{`
        .page_title {

@@ -123,35 +123,27 @@ h5, .h5 {
   width: 100%;
   height: 100%;
   align-items: center;
-  display: none;
+  display: flex;
+}
+
+.imageview__item .text > div{
+  opacity: 0;
 }
 
 .imageview__item:hover img {
-  display: none;
+  opacity: 0;
 }
 
-.imageview__item:hover .text {
-  display: flex;
-}
+.imageview__item:hover .text > div {
+  opacity: 1;
+} 
+
 
 /* list view starts */
 
 .listview__item .title{
  margin-bottom: 0;
 }
-
-@media only screen 
-   and (max-width : 1000px) {
-   /* Styles here */
-    /* .imageview__item .text {
-      display: flex;
-    } */
-    .imageview__item:hover img {
-      display: block;
-      opacity: 0;
-    }
-}
-
 
 /* end */
 
