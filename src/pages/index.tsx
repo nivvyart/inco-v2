@@ -4,16 +4,22 @@ import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import LinkedInMeta from "../components/meta/LinkedInMeta";
 import MarqueeText from "../components/MarqueeText"
 import IncoLogoWhite from "../assets/INCO_LOGO.svg"
+import pageContent from "../../site/home.yml"
 
 
 
 export default function Index() {
+  let desktopImages = pageContent.desktopImages
+  let desktopImageCount = desktopImages.length
+  let randomNumber = Math.floor(Math.random() * desktopImageCount)
+  let currentDesktopImage = desktopImages[randomNumber]
+
   return (
     <Layout>
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <LinkedInMeta url={"/"} />
-      <div className="home">
+      <div className={`home`}>
         <div className="marquee bg-grey">
           <MarqueeText />
         </div>
@@ -34,12 +40,17 @@ export default function Index() {
           font-size: 1.8rem;
         }
         .home {
-          background: blue;
           height: 100vh;
           width: 100vw;
+          background-image: url("${currentDesktopImage}");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        
         }
 
         `}</style>
     </Layout>
   );
 }
+
