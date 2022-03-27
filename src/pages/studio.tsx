@@ -1,8 +1,11 @@
+import ReactMarkdown from 'react-markdown'
+
 import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import LinkedInMeta from "../components/meta/LinkedInMeta";
 import studioContent from "../../site/studio.yml";
+
 
 
 export default function Studio() {
@@ -17,7 +20,7 @@ export default function Studio() {
             <div className="left-content lg:w-9/12 lg:mr-0 lg:ml-auto lg:pr-20 w-10/12 px-20 mx-auto">
               <div>
                 <h4 className="mt-20">{studioContent.title}</h4>
-                <div>{studioContent.intro}</div>
+                <ReactMarkdown>{studioContent.intro}</ReactMarkdown>
               </div>
               <div className="max-w-sm">
               {studioContent.team.map((person, k) => (

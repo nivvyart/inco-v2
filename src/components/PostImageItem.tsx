@@ -12,7 +12,7 @@ export default function PostImageItem({ post }: Props) {
       <a>
         <div className="text">
           <div className="w-full">
-            <h2 className="title">{post.title}</h2>
+            <h2 className="title mb-8">{post.title}</h2>
             <Date date={parseISO(post.date)} />
           </div>
         </div>

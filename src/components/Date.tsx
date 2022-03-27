@@ -9,9 +9,7 @@ export default function Date({ date }: Props) {
       <span>{format(date, "yyyy")}</span>
       <style jsx>
         {`
-          span {
-            color: #9b9b9b;
-          }
+         
         `}
       </style>
     </time>

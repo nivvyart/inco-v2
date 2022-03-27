@@ -30,6 +30,7 @@ export default function BasicMeta({
           keywords
             ? keywords.join(",")
             : config.site_keywords.map((it) => it).join(",")
+            // : config.site_keywords.map((it) => it.keyword).join(",")
         }
       />
       {author ? <meta name="author" content={author} /> : null}
