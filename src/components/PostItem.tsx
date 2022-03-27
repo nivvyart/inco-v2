@@ -17,10 +17,10 @@ export default function PostItem({ post }: Props) {
               <h2 className="title">{post.title}</h2>
             </div>
           </div>
-            {xValue && yValue ? <img className="absolute" style={{top: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, right: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
-            {!xValue && yValue ? <img className="absolute" style={{bottom: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, right: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
-            {xValue && !yValue ? <img className="absolute" style={{top: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, left: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
-            {!xValue && !yValue ? <img className="absolute" style={{bottom: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, left: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
+            {xValue && yValue ? <img className="absolute max-w-[50%]" style={{top: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, right: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
+            {!xValue && yValue ? <img className="absolute max-w-[50%]" style={{bottom: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, right: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
+            {xValue && !yValue ? <img className="absolute max-w-[50%]" style={{top: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, left: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
+            {!xValue && !yValue ? <img className="absolute max-w-[50%]" style={{bottom: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, left: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
 
 
         </div>
