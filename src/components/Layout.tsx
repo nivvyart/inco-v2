@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
-import Contact from "./contact"
+import Contact from "./ContactLink"
 import IncoMark from "./incoMark";
 import { useRouter } from 'next/router'
 

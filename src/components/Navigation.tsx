@@ -4,15 +4,23 @@ import Burger from "./Burger";
 import { useState } from "react";
 import IncoLogo from "../assets/INCO_LOGO.svg"
 import Clock from "./Clock"
+import Contact from "./ContactLink"
+
 
 export default function Navigation() {
   const router = useRouter();
   const [active, setActive] = useState(false);
   const colors = ['bg-oliveg', 'bg-terracotta', 'bg-timber'];
+  let url = useRouter()
+
   return (
     <>
       <Burger active={active} onClick={() => setActive(!active)} />
+
       <div className={"nav-menu " + (active ? "active " : "") + colors[(Math.floor(Math.random() * 3))]}>
+      { url.pathname == '/' ? <Contact />  : '' }
+
+
         <div className="flex flex-wrap h-full">
           <div className="lg:flex-grow lg:w-1/3 lg:border-r-2 lg:border-black items-end hidden md:block">
             <div className="lg:h-full nav-logo flex items-end">
