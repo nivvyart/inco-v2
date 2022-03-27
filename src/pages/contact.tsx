@@ -18,15 +18,15 @@ export default function Contact() {
 
       <div className="bg-black text-white">
 
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-screen pl-14 pr-10">
           <div className="m-auto">
             <div>
-              <h4 className="text-center">{contactContent.title}</h4>
+              <div className="title">{contactContent.title}</div>
             </div>
-            <div className="mt-20">
-              <ReactMarkdown className="h4 text-center leading-tight">{contactContent.address}</ReactMarkdown>
+            <div className="mt-8 lg:mt-20">
+              <ReactMarkdown className="h4 left-left lg:text-center leading-tight text-white">{contactContent.address}</ReactMarkdown>
             </div>
-            <div className="text-center">
+            <div className="text-center w-full bottom-0 left-0 p-4 pb-2">
               <SocialList white={true} />
             </div>
           </div>
@@ -43,6 +43,7 @@ export default function Contact() {
         left: -15px;
         color: white;
       }
+
 
      
       `}</style>

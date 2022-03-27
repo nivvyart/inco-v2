@@ -17,7 +17,7 @@ export default function Studio() {
       <div className="page_title">Studio</div>
         <div className="mx-auto">
           <div className="grid lg:grid-cols-2 gap-0 grid-cols-1">
-            <div className="left-content lg:w-9/12 lg:mr-0 lg:ml-auto lg:pr-20 w-10/12 px-20 mx-auto">
+            <div className="left-content lg:w-9/12 lg:mr-0 lg:ml-auto lg:pr-20 w-full pl-14 pr-10 mx-auto">
               <div>
                 <h4 className="mt-20">{studioContent.title}</h4>
                 <ReactMarkdown>{studioContent.intro}</ReactMarkdown>
@@ -34,7 +34,7 @@ export default function Studio() {
               </div>
 
             </div>
-            <div className="bg-grey hidden lg:block"></div>
+            <div className="bg-grey hidden lg:block side-image"></div>
             
           </div>
         </div>
@@ -46,6 +46,16 @@ export default function Studio() {
           line-height: 17px;
           left: -5px;
           font-size: 1.5rem;
+        }
+        .side-image {
+          background-image: url("${studioContent.main_image}");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: fixed;
+          height: 100vh;
+          width: 50vw;
+          right: 0;
         }
       `}</style>
     </Layout>

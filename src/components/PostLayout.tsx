@@ -96,7 +96,7 @@ export default function PostLayout({
                   </SwiperSlide>
                   {galleryImages.map((i, key) => (
                     <SwiperSlide key={key} className=" relative m-auto">
-                      <img src={i} width={'auto'} height={'auto'} />
+                      <img className="md:px-0 p-10" src={i} width={'auto'} height={'auto'} />
                     </SwiperSlide>
                   ))}
 

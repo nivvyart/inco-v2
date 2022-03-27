@@ -109,6 +109,10 @@ h5, .h5 {
 
 }
 
+.text-white a {
+  color: white;
+}
+
 /* site styles */
 /* post list page */
 

@@ -9,14 +9,16 @@ intro: >-
   Our work is part of who we are. 
 
 
+  &nbsp; 
+
+
   #### We believe well considered design and finely crafted environments has the power to transform one’s experience. 
 
 
-  INCO studio works across a wide range of scale and sectors, partaking in all stages of design, fabrication and construction. We work collaboratively with our clients to create thoughtful and captivating experience.
+  INCO studio works across a wide range of scale and sectors, partaking in all stages of design, fabrication and construction. We work collaboratively with our clients to create thoughtful and captivating experience. Through collaboration in a strategic lane and innovation drive, our designs are constantly refined and authentically curated. We approach each projects through distilling the essense, understanding the requsites and investigating the narrative of our client’s identity, their clients and end-users, forming unique solutions through exploration of crafts, materials and details.  
 
-
-  Through collaboration in a strategic lane and innovation drive, our designs are constantly refined and authentically curated. We approach each projects through distilling the essense, understanding the requsites and investigating the narrative of our client’s identity, their clients and end-users, forming unique solutions through exploration of crafts, materials and details.
-
+  
+  &nbsp; 
 
   #### Clients/ Collaborators
 
@@ -65,7 +67,7 @@ main_image: /images/studio_draft.jpg
 team:
   - name: Jayson
     position: Founder
-    photo: https://via.placeholder.com/400
+    photo: /images/studio_draft.jpg
     description: Donec ultrices odio id convallis placerat. Vestibulum sed sapien
       sed mi ultrices sollicitudin. Nam blandit augue a diam scelerisque
       fringilla. Quisque rutrum, neque nec hendrerit suscipit, tellus sem mollis
