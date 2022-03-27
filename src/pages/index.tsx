@@ -23,7 +23,7 @@ export default function Index() {
         <div className="marquee bg-grey">
           <MarqueeText />
         </div>
-        <div className="h-full nav-info flex items-end p-4">
+        <div className="h-full nav-info flex items-end p-4 pb-0">
           <IncoLogoWhite style={{fill: "white"}}/>
         </div>
       </div>
@@ -31,13 +31,15 @@ export default function Index() {
        .marquee {
           position: fixed;
           width: 100%;
-          height: 50px;
+          height: 46px;
           cursor: pointer;
-          padding-top: 0.4rem;
+          padding-top: 0.7rem;
           padding-left: 2.5rem;
           z-index: 2;
           padding-right: 1rem;
-          font-size: 1.8rem;
+          font-size: 1.5rem;
+          letter-spacing: 0.5px;
+
         }
         .home {
           height: 100vh;

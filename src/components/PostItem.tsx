@@ -14,7 +14,7 @@ export default function PostItem({ post }: Props) {
 
           <div className="text">
             <div className="w-full">
-              <h2 className="title">{post.title}</h2>
+              <h2 className="title h-6 mb-3"><span className="z-10 lg:absolute lg:w-full lg:center lg:left-0">{post.title}</span></h2>
             </div>
           </div>
             {xValue && yValue ? <img className="absolute max-w-[50%]" style={{top: `${Math.random() < 0.5 ? '-' : ''}${Math.random() * 20}%`, right: `${(Math.random() - 0.5) * 20}%`}} src={post.featureImage} /> : ''}
@@ -25,7 +25,13 @@ export default function PostItem({ post }: Props) {
 
         </div>
         <style jsx>{`
+          a {
+            color: var(--black)
+          }
 
+          a:hover {
+            color: var(--greyhover)
+          }
           .post--link img {
             display: none;
           }
@@ -37,7 +43,6 @@ export default function PostItem({ post }: Props) {
         `}</style>
 
       </a>
-      
     </Link>
 
   );

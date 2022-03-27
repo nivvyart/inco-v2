@@ -45,8 +45,8 @@ export default function PostList({ posts, tags, pagination }: Props) {
           </ul>
         </div>   
         {!listView ? 
-          <div className="post_list mx-auto imageview p-10" >
-            <div className={"grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-10 content-center	"}>
+          <div className="post_list mx-auto imageview p-11 pt-6 lg:p-10 lg:mt-10" >
+            <div className={"grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-28 content-center	"}>
               {posts.map((it, i) => (
                 <div key={i} className='imageview__item relative'>
                   <PostImageItem post={it}  />
@@ -55,7 +55,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
             </div>
           </div>
          : 
-          <div className="post_list grid lg:min-h-[80vh] content-center listview text-center mt-20" >
+          <div className="post_list lg:grid lg:min-h-[80vh] content-center listview text-center mt-20" >
             <div className={"lg:w-4/6 mx-auto"}>
               {posts.map((it, i) => (
                 <div key={i} className='listview__item'>

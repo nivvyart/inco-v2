@@ -92,7 +92,7 @@ export default function PostLayout({
                   loop={true}
                   >
                   <SwiperSlide key='textblock' className="text-slide relative m-auto">
-                    <div className="lg:w-3/5 mx-auto text-center">{children}</div>
+                    <div className="lg:w-3/5 mx-auto px-10 lg:p-4">{children}</div>
                   </SwiperSlide>
                   {galleryImages.map((i, key) => (
                     <SwiperSlide key={key} className=" relative m-auto">
@@ -105,7 +105,7 @@ export default function PostLayout({
               </article>
 
             </div>
-            <footer className="text-center p-4 w-full fixed left-0 bottom-0 leading-3">
+            <footer className="text-center p-4 pb-2 w-full fixed left-0 bottom-0 leading-3">
               <button type="button" onClick={() => router.back()}>
                 Close
               </button>
@@ -120,6 +120,9 @@ export default function PostLayout({
             line-height: 17px;
             left: -17px;
           }
+
+          
+          
           
 
 

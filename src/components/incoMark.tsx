@@ -30,7 +30,10 @@ export default function IncoMark() {
         @media only screen 
         and (max-width : 800px) {
         .inco-circle {
-          left: -86px;
+          left: -66px;
+          width: 100px;
+          height: 100px;
+          bottom: -6px;
         }
      }
      `}</style>

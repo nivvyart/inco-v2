@@ -26,7 +26,7 @@
   --oliveg: #484430;
   --terracotta: #84452D;
   --timber: #7B5F4D; 
-
+  --greyhover: #9b9b9b;
 
 
   --primary: #367ee9;
@@ -66,7 +66,7 @@ body {
 }
 
 a {
-  color: #9b9b9b;
+  color: var(--greyhover);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -142,9 +142,7 @@ h5, .h5 {
 
 /* list view starts */
 
-.listview__item .title{
- margin-bottom: 0;
-}
+
 
 /* end */
 
@@ -177,11 +175,10 @@ h5, .h5 {
 
 .swiper-pagination {
   position: fixed !important;
-  right: 0 !important;
+  right: -10px !important;
   top: 48% !important;
   width: 60px !important;
   height: 60px !important;
-
   left: auto !important;
 }
 
@@ -193,6 +190,25 @@ h5, .h5 {
   opacity: 0;
 }
 
+.text-slide blockquote {
+  text-align: center;
+}
+
 .text-slide blockquote:first-of-type {
   margin-top: 2rem;
 }
+
+.text-slide h4 {
+  font-size: 1rem
+}
+@media (max-width: 767px) {
+  .swiper-pagination {top: auto !important; bottom: 1rem !important;}
+
+ }
+
+@media (min-width: 768px) { 
+  .text-slide h4 {
+    font-size:1.5rem;
+  }
+
+ }
