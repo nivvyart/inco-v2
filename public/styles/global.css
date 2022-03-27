@@ -178,14 +178,19 @@ h5, .h5 {
 .swiper-pagination {
   position: fixed !important;
   right: 0 !important;
-  top: 50% !important;
+  top: 48% !important;
   width: 60px !important;
   height: 60px !important;
 
   left: auto !important;
 }
+
+.swiper-pagination span {
+  display: block;
+}
+
 .swiper-button-prev, .swiper-button-next {
-  display: none !important;
+  opacity: 0;
 }
 
 .text-slide blockquote:first-of-type {

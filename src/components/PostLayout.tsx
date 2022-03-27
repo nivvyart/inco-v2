@@ -105,7 +105,7 @@ export default function PostLayout({
               </article>
 
             </div>
-            <footer className="text-center">
+            <footer className="text-center mt-10">
               <button type="button" onClick={() => router.back()}>
                 Close
               </button>
