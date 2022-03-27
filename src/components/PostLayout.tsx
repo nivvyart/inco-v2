@@ -13,7 +13,15 @@ import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
 import { useRouter } from 'next/router'
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+
 import 'swiper/swiper-bundle.min.css';
+import 'swiper/components/navigation/navigation.min.css'
+import 'swiper/components/pagination/pagination.min.css'
+import SwiperCore, {
+  Pagination,Navigation
+} from 'swiper/core';
+SwiperCore.use([Pagination,Navigation]);
 
 
 type Props = {
@@ -72,27 +80,32 @@ export default function PostLayout({
         <div className="page_title title">Projects</div>
         <h1 className={"title text-center p-4"}>{title}</h1>
           <div className={"container mx-auto pt-20"}>
-            <article>
-            <Swiper
-              spaceBetween={30}
-              centeredSlides={true}
-            >
-            <SwiperSlide key='textblock'>
-              <div className="">{children}</div>
-            </SwiperSlide>
-            {galleryImages.map((i, key) => (
-              <SwiperSlide key={key}>
-                <img src={i} width={'auto'} height={'auto'} />
-              </SwiperSlide>
-            ))}
+            <div className="blah">
+              <article>
+                <Swiper
+                  spaceBetween={30}
+                  centeredSlides={true}
+                  pagination={{
+                    type: "fraction",
+                  }}
+                  navigation={true}
+                  loop={true}
+                  >
+                  <SwiperSlide key='textblock' className="text-slide relative m-auto">
+                    <div className="lg:w-3/5 mx-auto text-center">{children}</div>
+                  </SwiperSlide>
+                  {galleryImages.map((i, key) => (
+                    <SwiperSlide key={key} className=" relative m-auto">
+                      <img src={i} width={'auto'} height={'auto'} />
+                    </SwiperSlide>
+                  ))}
 
-          </Swiper>
-              <div>
+                </Swiper>
 
-              
-              </div>
-            </article>
-            <footer>
+              </article>
+
+            </div>
+            <footer className="text-center">
               <button type="button" onClick={() => router.back()}>
                 Close
               </button>
@@ -107,6 +120,9 @@ export default function PostLayout({
             line-height: 17px;
             left: -17px;
           }
+          
+
+
           `}
       </style>
      
@@ -115,17 +131,17 @@ export default function PostLayout({
 }
 
   {/* <ul className={"tag-list"}>
-            {tags.map((it, i) => (
-              <li key={i}>
-                <TagButton tag={getTag(it)} />
-              </li>
-            ))}
-          </ul> */}
-            {/* <div>
-              <div>
-                <Date date={date} />
-              </div>
-              <div>
-                <Author author={getAuthor(author)} />
-              </div>
-            </div> */}
+  {tags.map((it, i) => (
+    <li key={i}>
+      <TagButton tag={getTag(it)} />
+    </li>
+  ))}
+</ul> */}
+  {/* <div>
+    <div>
+      <Date date={date} />
+    </div>
+    <div>
+      <Author author={getAuthor(author)} />
+    </div>
+  </div> */}

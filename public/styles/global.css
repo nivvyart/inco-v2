@@ -165,3 +165,29 @@ h5, .h5 {
   top: 0;
   left: 0;
 }
+
+.swiper-container {
+  max-height: 80vh !important;
+}
+
+.swiper-slide img{
+  max-height: 75vh;
+  margin: 0 auto;
+}
+
+.swiper-pagination {
+  position: fixed !important;
+  right: 0 !important;
+  top: 50% !important;
+  width: 60px !important;
+  height: 60px !important;
+
+  left: auto !important;
+}
+.swiper-button-prev, .swiper-button-next {
+  display: none !important;
+}
+
+.text-slide blockquote:first-of-type {
+  margin-top: 2rem;
+}
