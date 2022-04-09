@@ -1,6 +1,8 @@
 import React from "react";
 import { PostContent } from "../lib/posts";
 import PostImageItem from "./PostImageItem";
+import { TagContent } from "../lib/tags";
+
 import tags from "../../meta/tags.yml";
 import {useRouter} from "next/router";
 import PostItem from "./PostItem";
@@ -8,12 +10,13 @@ import Pagination from "./Pagination";
 
 type Props = {
   posts: PostContent[];
+  tag: TagContent;
   pagination: {
     current: number;
     pages: number;
   };
 };
-export default function TagPostList({ posts, pagination }: Props) {
+export default function TagPostList({ posts, tag, pagination }: Props) {
 
   const [listView, setView]= React.useState(false)
   
