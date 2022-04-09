@@ -24,8 +24,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
     setView(!listView)
   }
 
-
-  return (
+   return (
     <div className={"posts"}>
         <div className="page_title title">Projects</div>
 
