@@ -191,15 +191,33 @@ h5, .h5 {
 }
 
 .swiper-button-prev, .swiper-button-next {
-  opacity: 0;
+  opacity: 0.5;
 }
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  height: 100% !important;
+  top: 0 !important;
+  width: 49% !important;
+}
+
+.swiper-button-prev:hover {
+  cursor:url('../../src/assets/previous.png'), auto ;
+}
+.swiper-button-next:hover {
+  cursor:url('../../src/assets/next.png'), auto ;
+}
+
 
 .text-slide blockquote {
   text-align: center;
 }
 
 .text-slide blockquote:first-of-type {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .text-slide h4 {

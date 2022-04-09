@@ -24,7 +24,9 @@ export default function Index() {
           <MarqueeText />
         </div>
         <div className="h-full nav-info flex items-end p-4 pb-0">
-          <IncoLogoWhite style={{fill: "white"}}/>
+          <div className="items-end w-full">
+            <IncoLogoWhite fill="white" />
+          </div>  
         </div>
       </div>
       <style jsx>{`
@@ -39,8 +41,8 @@ export default function Index() {
           padding-right: 1rem;
           font-size: 1.5rem;
           letter-spacing: 0.5px;
-
         }
+ 
         .home {
           height: 100vh;
           width: 100vw;

@@ -55,7 +55,7 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
             <div className="post_list mx-auto imageview p-14 pt-6 lg:p-10 lg:mt-10" >
               <div className={"grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-28 content-center	"}>
                 {posts.map((it, i) => (
-                  <div key={i} className='imageview__item relative animate__animated animate__fadeIn'>
+                  <div key={i} className='imageview__item relative animate__animated animate__zoomIn'>
                     <PostImageItem post={it}  />
                   </div>
                 ))}
@@ -92,6 +92,11 @@ export default function TagPostList({ posts, tag, pagination }: Props) {
           line-height: 17px;
           left: -17px;
         }
+
+        // .imageview__item {
+        //   animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        //   animation-duration: 1s; /* don't forget to set a duration! */
+        // }
       
         `}</style>
       </div>

@@ -34,7 +34,7 @@ export default function PostList({ posts, tags, pagination }: Props) {
         <div className="text-center">
           <ul>
             <li className="inline mx-3">
-              <a href="/projects">All</a>
+              <a className="text-black" href="/projects">All</a>
             </li>
             {tags.map((it, i) => (
               <li className="lg:inline mx-3" key={i}>

@@ -35,17 +35,17 @@ export default function Navigation() {
             <div className="flex grow flex-col h-3/6 border-b-2 border-black lg:h-full lg:border-b-0">
               <div className="nav-links p-4 mt-10 lg:mt-0">
                 <ul>
-                  <li className="lg:text-9xl md:text-7xl text-6xl mb-1  tracking-wide  sm:tracking-normal">
+                  <li className="lg:text-9xl md:text-7xl text-6xl mb-1  tracking-wide  sm:tracking-normal xxxx">
                     <Link href="/projects">
                       <a className={router.pathname.startsWith("/projects") ? "active" : null }>Projects</a>
                     </Link>
                   </li>
-                  <li className="lg:text-9xl md:text-7xl text-6xl mb-1 tracking-wide  sm:tracking-normal ">
+                  <li className="lg:text-9xl md:text-7xl text-6xl mb-1 tracking-wide  sm:tracking-normal xxxx">
                     <Link href="/studio">
                       <a className={router.pathname === "/studio" ? "active" : null}>Studio</a>
                     </Link>
                   </li>
-                  <li className="lg:text-9xl md:text-7xl text-6xl mb-1  tracking-wide  sm:tracking-normal">
+                  <li className="lg:text-9xl md:text-7xl text-6xl mb-1  tracking-wide  sm:tracking-normal xxxx">
                     <Link href="/inco-lab">
                       <a className={router.pathname === "/inco-lab" ? "active" : null}>INCO Lab</a>
                     </Link>
@@ -95,15 +95,18 @@ export default function Navigation() {
           
           .nav-links li {
             line-height: 1;
+            transition: transform 250ms;
 
           }
             
           .nav-links a {
             color: black;
-
           }
 
-      
+          .nav-links li:hover {
+            transform: translateX(100px);
+          }
+  
 
          
          

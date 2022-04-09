@@ -16,26 +16,32 @@ export default function Studio() {
       <LinkedInMeta url={"/"} />
       <div className="page_title">Studio</div>
         <div className="mx-auto">
+          
           <div className="grid lg:grid-cols-2 gap-0 grid-cols-1">
             <div className="left-content lg:w-9/12 lg:mr-0 lg:ml-auto lg:pr-20 w-full pl-14 pr-10 mx-auto">
               <div>
+             
                 <h4 className="mt-20">{studioContent.title}</h4>
+                  <div className={'block md:hidden'}>
+                  <img src={studioContent.main_image} alt="studio image" />
+                </div>
                 <ReactMarkdown>{studioContent.intro}</ReactMarkdown>
               </div>
-              <div className="max-w-sm">
-              {studioContent.team.map((person, k) => (
-                <div key={k} className="my-10">
-                  <img src={person.photo} alt={person.name + ' profile image'} />
-                  <h5 className="my-4 leading-none text-lg">{person.name} <br/>{person.position}</h5>
-                  <div>{person.description}</div>
-                </div>
-              ))}
+              {/* <div className="max-w-sm">
+                {studioContent.team.map((person, k) => (
+                  <div key={k} className="my-10">
+                    <img src={person.photo} alt={person.name + ' profile image'} />
+                    <h5 className="my-4 leading-none text-lg">{person.name} <br/>{person.position}</h5>
+                    <div>{person.description}</div>
+                  </div>
+                ))}
 
-              </div>
+              </div> */}
+
+             
 
             </div>
             <div className="bg-grey hidden lg:block side-image"></div>
-            
           </div>
         </div>
       <style jsx>{`
