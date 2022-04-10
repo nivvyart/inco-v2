@@ -14,12 +14,18 @@ export default function Index() {
   let randomNumber = Math.floor(Math.random() * desktopImageCount)
   let currentDesktopImage = desktopImages[randomNumber]
 
+  const styles = {
+    container: {
+      backgroundImage: `url(${currentDesktopImage})`,
+    },
+  };
+
   return (
     <Layout>
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <LinkedInMeta url={"/"} />
-      <div className={`home`}>
+      <div className={`home`} style={styles.container}>
         <div className="marquee bg-grey">
           <MarqueeText />
         </div>
@@ -46,14 +52,13 @@ export default function Index() {
         .home {
           height: 100vh;
           width: 100vw;
-          background-image: url("${desktopImages[randomNumber]}");
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
-        
         }
-
-        `}</style>
+        `
+        }
+        </style>
     </Layout>
   );
 }
