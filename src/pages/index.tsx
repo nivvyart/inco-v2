@@ -46,7 +46,7 @@ export default function Index() {
         .home {
           height: 100vh;
           width: 100vw;
-          background-image: url("${currentDesktopImage}");
+          background-image: url("${desktopImages[randomNumber]}");
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
