@@ -78,9 +78,9 @@ export default function PostLayout({
         description={description}
       />
         <div className="page_title title">Projects</div>
-        <h1 className={"title text-center p-4"}>{title}</h1>
-          <div className={"container mx-auto pt-20"}>
-            <div className="blah">
+        <h1 className={"title text-center p-4 mt-24 md:mt-0 "}>{title}</h1>
+          <div className={"container mx-auto pt-0 md:pt-5 lg:pt-20"}>
+            <div >
               <article>
                 <Swiper
                   spaceBetween={30}

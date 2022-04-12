@@ -26,7 +26,7 @@ export default function Contact() {
             <div className="mt-8 lg:mt-20">
               <ReactMarkdown className="h4 left-left lg:text-center leading-tight text-white">{contactContent.address}</ReactMarkdown>
             </div>
-            <div className="text-center w-full bottom-0 left-0 p-4 pb-2">
+            <div className={"text-center w-full fixed bottom-0 left-0 p-4 pb-2"}>
               <SocialList white={true} />
             </div>
           </div>
