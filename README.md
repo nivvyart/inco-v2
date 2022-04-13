@@ -1,14 +1,14 @@
 ## Build for Inco Design Studio
 
 Clone the repo:
-npm  install
-npm run dev
+ - npm  install
+- npm run dev
 
 Node Version: 14
 
 Build:
-Build command : next export
-Publish directory  : dist
+- Build command : next export
+- Publish directory  : dist
 (this is serving static pages so next export must be used).
 
 
