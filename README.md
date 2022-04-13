@@ -9,7 +9,7 @@ Node Version: 14
 Build:
 - Build command : next export
 - Publish directory  : dist
-(this is serving static pages so next export must be used).
+- (this is serving static pages so next export must be used).
 
 
 ### Start point:
